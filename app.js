@@ -1,6 +1,7 @@
 let boxes = document.querySelectorAll('.box');
 let resetBtn = document.querySelector('#reset-btn');
 let msg = document.querySelector('.msg');
+let video = document.querySelector('.video');
 
 let clicked = new Audio('./audio/click.wav');
 let winner = new Audio('./audio/win.mp3');
@@ -52,6 +53,10 @@ const checkWin = () => {
                 msg.innerHTML = `${positon1} Won the Game`;
                 disableBox();
                 winner.play();
+                video.classList.remove('hide');
+                video.autoplay = true;
+                video.loop = true;
+                video.load();
             }
         }
     }
@@ -75,5 +80,9 @@ boxes.forEach((box) => {
 
 resetBtn.addEventListener('click', () => {
     newGame.play();
+    video.classList.add('hide');
+    video.autoplay = false;
+    video.loop = false;
+    video.pause();
     reset();
 })

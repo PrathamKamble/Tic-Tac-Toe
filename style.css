@@ -7,6 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+.hide {
+    display: none;
+}
+
 .bt {
     border-top: 0!important;
 }
@@ -25,11 +29,14 @@
 
 nav {
     background-color: cornflowerblue;
-    padding: 15px;
+    padding: 15px 20px;
 }
 
 ul {
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul li{
@@ -48,6 +55,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
 .game {
@@ -74,7 +82,7 @@ main {
 }
 
 #reset-btn {
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1.25rem;
     background-color: cornflowerblue;
 }
